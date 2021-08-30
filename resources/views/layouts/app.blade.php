@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel  shop ghaneipour</title>
+        <title>Laravel index shop ghaneipour</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -22,9 +22,23 @@
     </head>
     <body class="antialiased">
         <div>
-    hello i am pedram   welcom<hr>
-    <a href="/LoginPage">login </a>
-    </div>
+            Master Page  is after<br>
+            <?php  
+            if (session('logined')==true) {
+                 ?> 
+                 <a href="/LoginPage">login </a> 
+                 <?php 
+                } 
+                else
+                {
+                    //session_start(); 
+                    //if ($_SESSION['loginedName']==null) {
+                   //     $_SESSION['loginedName']="no  name";
+                    //}
+                   // echo($_SESSION['loginedName']);
+                }
+                ?>
+        </div>
 
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
