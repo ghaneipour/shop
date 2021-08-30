@@ -22,6 +22,8 @@
     </head>
     <body class="antialiased">
         <div>
+        cnf={{ config('app.name','Laravel')}}
+        <hr>
             Master Page  is after<br>
             <?php  
             if (session('logined')==true) {
